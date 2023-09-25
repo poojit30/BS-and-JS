@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversing Numbers using JavaScript</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            width: fit-content;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Reverse Number:</h2>
+        <p style="text-align: center;">Give a number, reverse it.</p>
+        <p style="text-align: center;">Example: 32243 => 34223</p>
+        <input type="text" id="x" placeholder="Enter a number">
+        <button onclick="reverse()">Reverse</button>
+        <br>
+        <h3 id="result"></h3>
+        <script>
+            function reverse() {
+                var x = document.getElementById("x").value;
+                var rev = 0;
+                while(x > 0) {
+                    rev = rev * 10 + x % 10;
+                    x = Math.floor(x / 10);
+                }
+                document.getElementById("result").innerHTML = rev;
+            }
+        </script>
+
+    </div>
+</body>
+</html>

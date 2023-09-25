@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning letters in alphabetical order using JavaScript</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            width: fit-content;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Alphabetical order</h2>
+        <p style="text-align: center;">Give a word, Generate the given letters in alphabetical order.</p>
+        <p style="text-align: center;">Example: webmaster => abeemrstw</p>
+        <input type="text" id="x" placeholder="Enter a word">
+        <button onclick="alphabetical()">Alphabetical</button>
+        <br>
+        <h3 id="result"></h3>
+        <script>
+            function alphabetical() {
+                var x = document.getElementById("x").value;
+                var y = x.split("");
+                var z = y.sort();
+                var a = z.join("");
+                document.getElementById("result").innerHTML = a;
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calci Using JavaScript</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            width: fit-content;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        1st Number :  
+        <input type="text" id="num1" placeholder="">
+        <br>
+        2nd Number :  
+        <input type="text" id="num2" placeholder="">
+        <br>
+        <button onclick="multiply()">Multiply</button> <button onclick="division()">Division</button>
+        <br>
+        <p>The Result is:</p>
+        <p id="result"></p>
+        <script>
+            function multiply() {
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var result = num1 * num2;
+                document.getElementById("result").innerHTML = result;
+            }
+            function division() {
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var result = num1 / num2;
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+        
+    </div>
+</body>
+</html>
